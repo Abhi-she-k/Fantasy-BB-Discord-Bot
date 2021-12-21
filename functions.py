@@ -2,8 +2,7 @@ from asyncio.windows_events import NULL
 import requests
 import nest_asyncio
 from bs4 import BeautifulSoup
-import os
-import sports
+
 
 
 nest_asyncio.apply()
