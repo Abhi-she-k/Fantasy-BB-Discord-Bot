@@ -1,6 +1,5 @@
 import os
 import discord
-from discord import message
 from functions import get_name,get_player_info,get_player_stats,get_adv_stats
 client = discord.Client()
 
