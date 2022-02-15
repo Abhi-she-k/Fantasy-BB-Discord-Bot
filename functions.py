@@ -2,11 +2,8 @@ from asyncio.windows_events import NULL
 import requests
 import nest_asyncio
 
-
-
-
 nest_asyncio.apply()
-
+# yoyoyoyooyoy
 def get_name(player):
         
         info = requests.get(" https://www.balldontlie.io/api/v1/players?search={}".format(player)).json()
