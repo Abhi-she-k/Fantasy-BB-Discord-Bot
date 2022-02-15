@@ -1,13 +1,11 @@
 from asyncio.windows_events import NULL
 import requests
 import nest_asyncio
-from bs4 import BeautifulSoup
+
 
 
 
 nest_asyncio.apply()
-import pandas as pd
-
 
 def get_name(player):
         
