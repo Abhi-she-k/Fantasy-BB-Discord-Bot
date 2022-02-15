@@ -1,12 +1,7 @@
 from asyncio.windows_events import NULL
 import requests
 import nest_asyncio
-<<<<<<< HEAD
-=======
-#yoyoyoyo
 
-
->>>>>>> 3bb2fe35ba49a9f6f58ccf12e2cff269219d888d
 
 nest_asyncio.apply()
 # yoyoyoyooyoy
