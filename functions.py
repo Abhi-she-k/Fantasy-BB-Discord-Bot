@@ -9,25 +9,20 @@ def get_name(player):
         
         info = requests.get(" https://www.balldontlie.io/api/v1/players?search={}".format(player)).json()
         
-        for player in info['data']:
-
-            player_name = '\n' + str(player['first_name']) + " " + (player['last_name'])
-
-            return(player_name)
+        player_name = '\n' + str(info['data'][0]['first_name']) + " " + (info['data'][0]['last_name'])
+        return(player_name)
 
 def get_player_info(player):
 
         info = requests.get(" https://www.balldontlie.io/api/v1/players?search={}".format(player)).json()
         
-        for player in info['data']:
-            postion ="**POS**: " + player['position']
-            height = "**Height**: " + str(player['height_feet']) + "," + str(player['height_inches'])
-            weight = "**Weight**: " + str(player['weight_pounds']) + " lbs"
-            # age = "**Age**": + 
-            team = "**Team**: " + str(player['team']['full_name'])
+        postion ="**POS**: " + info['data'][0]['position']
+        height = "**Height**: " + str(info['data'][0]['height_feet']) + "," + str(info['data'][0]['height_inches'])
+        weight = "**Weight**: " + str(info['data'][0]['weight_pounds']) + " lbs"     
+        team = "**Team**: " + str(info['data'][0]['team']['full_name'])
         
-            player_info = team + '\n' + postion + "\n" + height + '\n' + weight + '\n' 
-            return(player_info)
+        player_info = team + '\n' + postion + "\n" + height + '\n' + weight + '\n' 
+        return(player_info)
 
 def get_player_stats(player, year):
         display_stats = ''
@@ -40,6 +35,7 @@ def get_player_stats(player, year):
         player_stat = requests.get("https://www.balldontlie.io/api/v1/season_averages?season={}&player_ids[]={}".format(year,id)).json()
 
         for j in player_stat['data']:
+            print(j)
             year1 =(str(year) + "-" + str(int(year)+1))
             ppg = '**PPG**: ' + str(j['pts'])
             reb = '**REB**: ' + str(j['reb'])

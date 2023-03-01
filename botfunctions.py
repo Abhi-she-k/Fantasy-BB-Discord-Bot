@@ -11,7 +11,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    list = []
     name = ''
     help = "\n**Help Menu**:\n**Basic Info**: .'player_name'\n**Basic Stats**: .'player_name', 'year'\n**Advanced Stats**: .'player_name', 'year', adv\n**Team Stats**: .'team_name'\n**Help Menu**: .help\n**Support**: .support\n-----------" 
     if message.author == client.user:
@@ -51,6 +50,6 @@ async def on_message(message):
                     await message.channel.send("\nCheck the the formatting from the '**.help**' menu")
                     await message.channel.send("-----------")
     
-client.run(os.environ.get('TOKEN'))
+client.run('MTA2NDY5MzAyNTU3NTU0Mjg2OA.G4J2XF.PY-hOvYBOy6HC_8eaNVzja5Y8gL-hhOt7nZuOg')
 
 
