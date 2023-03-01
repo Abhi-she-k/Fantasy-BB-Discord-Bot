@@ -50,6 +50,6 @@ async def on_message(message):
                     await message.channel.send("\nCheck the the formatting from the '**.help**' menu")
                     await message.channel.send("-----------")
     
-client.run('MTA2NDY5MzAyNTU3NTU0Mjg2OA.G4J2XF.PY-hOvYBOy6HC_8eaNVzja5Y8gL-hhOt7nZuOg')
+client.run('')
 
 
